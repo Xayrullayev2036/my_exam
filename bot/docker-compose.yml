@@ -1,0 +1,14 @@
+version: '3.11'
+
+
+services:
+  bot:
+    build: .
+    working_dir: /apps
+    container_name: save_news_bot
+    environment:
+      Token: ${Token}
+    command: python main.py
+volumes:
+  pg_data:
+
